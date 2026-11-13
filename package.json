@@ -1,0 +1,24 @@
+{
+  "name": "rsa-prime-estimator",
+  "version": "1.0.0",
+  "description": "Estimando π(x) e primos em chaves RSA por Mínimos Quadrados e Linearização (TypeScript × Julia)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "ts": "tsx src/index.ts",
+    "julia": "julia julia/main.jl",
+    "graficos": "tsx src/charts.ts",
+    "test": "tsc --noEmit && node --import tsx --test test/numerical.test.ts"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.65",
+    "chart.js": "^4.4.8",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
